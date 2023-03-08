@@ -1,11 +1,42 @@
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, Text, View } from 'react-native';
+import DemoScreen from './screens/DemoScreen';
+import HomeScreen from './screens/HomeScreen';
+import PaywallScreen from './screens/PaywallScreen';
+
+export type RootStackParamList = {
+  Home: undefined;
+  Paywall: undefined;
+  Demo: undefined;
+}
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
   return (
-    <SafeAreaView className="flex-1 items-center justify-center bg-red-500">
-      <Text>Open up App.tsx to start working on your appsd!</Text>
-      <StatusBar style="auto" />
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen 
+        options={{headerShown: false}}
+        name="Home" 
+        component={HomeScreen} />
+
+<Stack.Screen 
+         options={{headerShown: false}}
+        name="Demo" 
+        component={DemoScreen} />
+
+<Stack.Screen 
+         options={{headerShown: false, presentation: 'modal'}}
+        name="Paywall" 
+        component={PaywallScreen} />
+      </Stack.Navigator>
+
+       
+
+
+    </NavigationContainer>
   );
 }
