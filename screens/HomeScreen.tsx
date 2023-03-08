@@ -14,7 +14,6 @@ const HomeScreen = () => {
   return (
     <SafeAreaView className='flex-1 bg-gray-50 relative mt-10'>
         <ScrollView>
-      <Text>HomeScreen</Text>
 
       <TouchableOpacity onPress={() => navigation.navigate('Paywall')} className='absolute z-50 top-5 right-10 items-center'>
       <Ionicons name="person-circle" size={30} color="#E5962D" />
