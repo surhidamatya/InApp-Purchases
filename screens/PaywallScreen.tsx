@@ -67,16 +67,14 @@ const PaywallScreen = () => {
             <Text className='text-white'>20$/Mo</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity className='items-center px-10 py-5 mx-10 rounded-full bg-gray-700 mt-4'>
-            <Text className='text-white text-md text-center font-bold mb-1'>Save {" "} {((1- 100/(10*12))*100).toPrecision(2)}% annually</Text>
+        <TouchableOpacity className='items-center px-10 py-5 mx-10 rounded-full bg-gray-700 mt-4 border-2 border-[#E5962D]'>
+            <Text className='text-white text-md text-center font-bold mb-1'>Save{""} {((1- 100/(10*12))*100).toPrecision(2)}% annually</Text>
             <Text className='text-white'>299 yearly</Text>
         </TouchableOpacity>
 
         <TouchableOpacity className='items-center px-10 py-5 mx-10 mt-1'>
             <Text className='text-md text-center font-bold mb-1 text-gray-500'>Restore Purchases</Text>
         </TouchableOpacity>
-
-
 
     </ScrollView>
   )
